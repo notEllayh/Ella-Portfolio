@@ -1,3 +1,5 @@
+AOS.init();
+
 const sidenavOpen = document.getElementById('sidenavOpen'); 
 const sidenavClose = document.getElementById('sidenavClose');
 const sidenav = document.getElementById('sidenav');
