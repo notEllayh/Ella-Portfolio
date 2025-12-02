@@ -3,7 +3,21 @@ AOS.init();
 const sidenavOpen = document.getElementById('sidenavOpen'); 
 const sidenavClose = document.getElementById('sidenavClose');
 const sidenav = document.getElementById('sidenav');
+const form = document.getElementById("contactForm");
+const responseBox = document.getElementById("responseBox");
+const submitButton = document.getElementById("submitBtn");
+const loader = document.getElementById("loader");
 
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  loader.classList.remove("hidden"); 
+}); 
+
+loader.classList.add("hidden");
+    enableButton();
+
+// Side navigation
 sidenavOpen.style.display = 'block';
 sidenavClose.style.display = 'none'; 
 
@@ -44,4 +58,19 @@ function topFunction() {
     top: 0,
     behavior: 'smooth'
   });
+}
+
+// Form button disable/enable
+function disableButton() {
+  const button = document.getElementById("submitBtn");
+  button.disabled = true;
+  button.textContent = "Submitting...";
+  return true;
+}
+
+function enableButton() {
+  const button = document.getElementById("submitBtn");
+  button.disabled = false;
+  button.textContent = "Submit";
+  return true;
 }

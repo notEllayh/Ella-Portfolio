@@ -19,16 +19,21 @@
     <title>Pere-ere | Portfolio</title>
   </head>
 
-  <body class="bg-[#FFF2E0]">
+  <body class="bg-[#FFF2E0] darkmode">
     <!-- NavBar -->
     <header>
       <nav
         class="bg-[#FFF2E0] p-4 shadow-sm w-full flex items-center justify-between"
       >
-        <div class="mr-auto text-4xl cursor-pointer font-medium text-[#898AC4]">
+        <div
+          class="mr-auto text-2xl md:text-3xl cursor-pointer font-medium text-[#898AC4]"
+        >
           PERE-ERE
         </div>
-        <ul class="hidden md:flex gap-5 mr-[30px] cursor-pointer text-[20px]">
+
+        <ul
+          class="hidden md:flex gap-5 mr-[30px] cursor-pointer text-[16px] md:text-[18px]"
+        >
           <li class="hover:text-[#898AC4] transition duration-300">
             <a href="#home"></a>Home
           </li>
@@ -46,16 +51,8 @@
         </ul>
 
         <div class="md:hidden">
-          <i
-            class="fa-solid fa-bars cursor-pointer"
-            onclick="openNav"
-            id="sidenavOpen"
-          ></i>
-          <i
-            class="fa-solid fa-xmark cursor-pointer"
-            onclick="closeNav"
-            id="sidenavClose"
-          ></i>
+          <i class="fa-solid fa-bars cursor-pointer" id="sidenavOpen"></i>
+          <i class="fa-solid fa-xmark cursor-pointer" id="sidenavClose"></i>
         </div>
       </nav>
     </header>
@@ -89,17 +86,17 @@
       </div>
     </aside>
 
-    <main class="">
+    <main class="p-8">
       <!-- Hero Section -->
-      <section id="home">
+      <section id="home" class="relative">
         <div
-          class="grid justify-center items-center border-b border-b-[#898AC4] md:grid-cols-2 mt-15 gap-5 md:p-6"
+          class="grid justify-center items-center md:border-b md:border-b-[#898AC4] md:grid-cols-2 gap-5 md:p-6"
         >
           <div>
-            <h1 class="text-5xl md:text-7xl font-medium text-[#898AC4]">
+            <h1 class="text-5xl md:text-6xl font-medium text-[#898AC4]">
               HI, I AM <span class="block">PERE-ERE OYINKEPREYE.</span>
             </h1>
-            <p class="my-4 italic text-[18px] md:text-[22px]">
+            <p class="my-4 italic text-[18px] md:text-[20px]">
               A United kingdom based front-end developer passionate about
               building
               <span class="block">accessible and user friendly websites.</span>
@@ -135,24 +132,26 @@
       </section>
 
       <!-- About me -->
-      <section id="about" class="">
+      <section id="about" class="mt-15">
         <div
           class="grid justify-center items-center md:grid-cols-2 gap-5 md:p-6"
         >
           <div>
-            <h2 class="text-3xl md:text-7xl font-medium text-[#898AC4]">
+            <h2 class="text-3xl md:text-6xl font-medium text-[#898AC4]">
               ABOUT ME
             </h2>
           </div>
 
           <div data-aos="fade-up" data-aos-duration="1000">
-            <h3 class="text-2xl italic md:text-4xl font-medium text-[#898AC4]">
+            <h3
+              class="text-[18px] italic md:text-[20px] font-medium text-[#898AC4]"
+            >
               I am a front-end developer based in United kingdom.
-              <span class="block"
+              <span class=""
                 >Has Digital Media and Culinary Arts Background.</span
               >
             </h3>
-            <p class="my-4 italic text-[18px] md:text-[22px]">
+            <p class="my-4 italic text-[18px] md:text-[20px]">
               I am a front-end developer based in united kingdom, looking for
               exciting opportunites. Has Digital Media and Culinary Arts
               background. Likes to focus on accessibility when developing.
@@ -197,8 +196,8 @@
           class="grid justify-center items-center md:border-b border-b-[#898AC4] md:grid-cols-2 mt-15 gap-5 md:p-6"
         >
           <div>
-            <h2 class="text-3xl md:text-7xl font-medium text-[#898AC4]">
-              SKILLS
+            <h2 class="text-3xl md:text-6xl font-medium text-[#898AC4]">
+              MY SKILLS
             </h2>
           </div>
 
@@ -265,13 +264,13 @@
       </section>
 
       <!-- My Experience -->
-      <section class="">
+      <section class="my-15">
         <div
           class="grid md:grid-cols-2 items-center gap-5 md:p-6 md:border-b border-b-[#898AC4]"
         >
           <div>
-            <h2 class="text-3xl md:text-7xl font-medium text-[#898AC4]">
-              EXPERIENCE
+            <h2 class="text-3xl md:text-6xl font-medium text-[#898AC4]">
+              MY EXPERIENCE
             </h2>
           </div>
 
@@ -344,8 +343,8 @@
           class="grid md:grid-cols-2 lg:grid-cols-4 items-center gap-5 md:p-6 md:border-b border-b-[#898AC4]"
         >
           <div>
-            <h2 class="text-3xl md:text-7xl font-medium text-[#898AC4]">
-              PORTFOLIO
+            <h2 class="text-3xl md:text-6xl font-medium text-[#898AC4]">
+              MY PORTFOLIO
             </h2>
           </div>
 
@@ -452,32 +451,34 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="p-8">
       <section id="contact" class="">
         <div class="grid md:grid-cols-2 items-center gap-5 md:p-6">
           <div>
-            <h2 class="text-3xl md:text-7xl font-medium text-[#898AC4]">
+            <h2 class="text-3xl md:text-6xl font-medium text-[#898AC4]">
               LET'S CONNECT
             </h2>
-            <p class="mt-3 text-[18px] md:text-[22px]">
+            <p class="mt-3 text-[18px]">
               Say hello at <a href="#">ellaoyins@gmail.com</a>
             </p>
-            <p class="text-[18px] md:text-[22px]">
-              For more info, here's my <a href="#">resume</a>
+            <p class="text-[18px]">
+              For more info, here's my <a href="#" class="underline">resume</a>
             </p>
 
             <div class="mt-3">
-              <a href="https://www.linkedin.com/in/ella-oyins-363358337/"
+              <a
+                href="https://www.linkedin.com/in/ella-oyins-363358337/"
+                target="_blank"
                 ><i
                   class="fa-brands fa-linkedin-in text-2xl hover:text-[#898AC4] transition duration-300"
                 ></i
               ></a>
-              <a href="https://github.com/notEllayh"
+              <a href="https://github.com/notEllayh" target="_blank"
                 ><i
                   class="fa-brands fa-github text-2xl hover:text-[#898AC4] transition duration-300"
                 ></i
               ></a>
-              <a href="#"
+              <a href="#" target="_blank"
                 ><i
                   class="fa-brands fa-figma text-2xl hover:text-[#898AC4] transition duration-300"
                 ></i
@@ -486,7 +487,7 @@
           </div>
 
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <form class="italic">
+            <form id="contactForm" onsubmit="disableButton()" class="italic">
               <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
                   <label
@@ -530,7 +531,6 @@
                     name="company"
                     class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
                     placeholder="Google"
-                    required
                   />
                 </div>
                 <div>
@@ -545,7 +545,6 @@
                     name="phone_number"
                     class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
                     placeholder="123-45-678"
-                    required
                   />
                 </div>
               </div>
@@ -588,7 +587,6 @@
                     type="checkbox"
                     value=""
                     class="w-4 h-4 border border-default-medium rounded-xs bg-[#C0C9EE]"
-                    required
                   />
                 </div>
                 <label
@@ -601,11 +599,21 @@
                 >
               </div>
               <button
+                id="submitBtn"
                 type="submit"
                 class="text-[#FFF2E0] bg-[#898AC4] hover:bg-[#C0C9EE] transition ease-in-out duration-300 cursor-pointer box-border border border-transparent rounded-full focus:ring-4 shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
               >
                 Submit
               </button>
+
+              <div id="loader" class="loader"></div>
+
+              <div>
+                <p
+                  id="responseBox"
+                  class="text-center mt-4 font-medium italic"
+                ></p>
+              </div>
             </form>
           </div>
         </div>
@@ -613,12 +621,12 @@
         <div
           class="w-full mx-auto p-4 md:flex md:items-center md:justify-between"
         >
-          <span class="text-sm md:text-lg text-body sm:text-center"
+          <span class="text-sm md:text-[18px] text-body sm:text-center"
             >© 2025 <a href="index.html" class="hover:underline">Pere-ere</a>.
             All Rights Reserved.
           </span>
           <ul
-            class="hidden italic md:flex flex-wrap items-center mt-3 md:text-lg font-medium text-body sm:mt-0"
+            class="hidden italic md:flex flex-wrap items-center mt-3 md:text-[18px] font-medium text-body sm:mt-0"
           >
             <li>
               <a
