@@ -12,10 +12,45 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   loader.classList.remove("hidden"); 
-}); 
 
-loader.classList.add("hidden");
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("https://lily-hospital.com.ng/portfolio/api.php", {
+      method: "POST",
+      body: formData, 
+    }); 
+
+    const data = await response.json(); 
+    loader.classList.add("hidden");
     enableButton();
+
+    console.log(data); 
+
+    responseBox.classList.remove("hidden"); 
+    
+     if (data.status === "success") {
+      responseBox.className =
+        "text-green-700";
+      form.reset();
+    } else {
+      responseBox.className =
+        "text-red-700";
+    }
+
+      responseBox.innerHTML = `<pre class="text-sm whitespace-pre-wrap">${JSON.stringify(
+      data.message,
+      null,
+      2
+    )}</pre>`;
+
+  } catch (error) {
+    responseBox.classList.remove("hidden");
+    responseBox.innerHTML = "Error submitting the form. Please try again.";
+    responseBox.className =
+      "text-red-700";
+  }
+});
 
 // Side navigation
 sidenavOpen.style.display = 'block';
