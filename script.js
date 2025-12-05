@@ -70,7 +70,7 @@ form.addEventListener("submit", async (e) => {
         "text-red-700";
     }
 
-      responseBox.innerHTML = `<pre class="text-sm whitespace-pre-wrap">${JSON.stringify(
+      responseBox.innerHTML = `<pre class="text-sm text-green-600">${JSON.stringify(
       data.message,
       null,
       2
