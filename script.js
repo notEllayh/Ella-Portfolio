@@ -70,11 +70,11 @@ form.addEventListener("submit", async (e) => {
         "text-red-700";
     }
 
-      responseBox.innerHTML = `<pre class="text-sm text-green-600">${JSON.stringify(
+      responseBox.innerHTML = `<p class="text-sm text-green-600">${JSON.stringify(
       data.message,
       null,
       2
-    )}</pre>`;
+    )}</p>`;
 
   } catch (error) {
     responseBox.classList.remove("hidden");
