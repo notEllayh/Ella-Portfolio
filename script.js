@@ -8,10 +8,26 @@ const responseBox = document.getElementById("responseBox");
 const submitButton = document.getElementById("submitBtn");
 const loader = document.getElementById("loader");
 
+
+// Form button disable/enable
+function disableButton() {
+  const button = document.getElementById("submitBtn");
+  button.disabled = true;
+  button.textContent = "Submitting...";
+  return true;
+}
+
+function enableButton() {
+  const button = document.getElementById("submitBtn");
+  button.disabled = false;
+  button.textContent = "Submit";
+  return true;
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  loader.classList.remove("hidden"); 
+  loader.classList.add("hidden"); 
 
   const formData = new FormData(form);
 
@@ -20,6 +36,22 @@ form.addEventListener("submit", async (e) => {
       method: "POST",
       body: formData, 
     }); 
+
+    setTimeout (() => {
+      submitButton.textContent = "Submitted"; 
+      loader.classList.add("hidden");
+  }, 300);
+
+  setTimeout (() => {
+    submitButton.disabled = false;
+    submitButton.textContent = "Submit";
+    submitButton.classList.remove('Submitted');
+    responseBox.textContent = "";
+  }, 4000);
+
+  setTimeout (() => {
+    responseBox.classList.add("hidden");
+  }, 4500); 
 
     const data = await response.json(); 
     loader.classList.add("hidden");
@@ -52,6 +84,7 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+
 // Side navigation
 sidenavOpen.style.display = 'block';
 sidenavClose.style.display = 'none'; 
@@ -73,6 +106,7 @@ sidenavClose.addEventListener('click', () => {
     sidenavClose.style.display = 'none';
 });
 
+
 // Back to top button
 let mybutton = document.getElementById("backToTopBtn"); 
 
@@ -93,19 +127,4 @@ function topFunction() {
     top: 0,
     behavior: 'smooth'
   });
-}
-
-// Form button disable/enable
-function disableButton() {
-  const button = document.getElementById("submitBtn");
-  button.disabled = true;
-  button.textContent = "Submitting...";
-  return true;
-}
-
-function enableButton() {
-  const button = document.getElementById("submitBtn");
-  button.disabled = false;
-  button.textContent = "Submit";
-  return true;
 }
